@@ -9,12 +9,14 @@ h1, h2, h3, h4, h5, h6{
   line-height: 75px;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
+  color: #080A12;
 }
 p{
 font-family: 'Open Sans', sans-serif;
 font-size: 16px;
 line-height: 28px;
 font-weight: 400;
+color: #6F7775;
 }
 a, a:hover{
   text-decoration: none;
