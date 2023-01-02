@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../../accest/logo.png'
-import text from '../../accest/text.png'
 import { BiPhoneCall } from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -14,46 +12,49 @@ const Header = () => {
     <li className='text-primary text-xl font-medium hover:text-secondary'><Link to='/contact'>Contact Us</Link></li>
   </>
     return (
-      <div className="navbar max-w-[1190px] mx-auto my-auto justify-center align-center w-full">
+      <div className="navbar mt-2 items-center">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-outline lg:hidden">
+            <label tabIndex={0} className="lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 text-primary bg-transparent text-xl md:text-2xl lg:text-3xl hover:text-secondary border-0 w-5 "
-                fill="none"
+                className="h-5 w-5 mr-2"
+                fill="#701B2E"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                stroke="#701B2E"g 
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth="3"
+                  strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
                 />
               </svg>
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content bg-base-100 mt-3  shadow  rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               {menu}
             </ul>
           </div>
-          <Link to="/">
-            <h1 className="text-xl md:text-2xl lg:text-3xl text-primary">
-              Swapnotthan
-            </h1>
+          <Link
+            to="/"
+            className=" normal-case text-[44px] text-primary hover:transform-cpu"
+          >
+            Swapno
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal  p-2">{menu}</ul>
+          <ul className="menu menu-horizontal px-1">{menu}</ul>
         </div>
         <div className="navbar-end">
-          <button className="btn btn-primary  text-l rounded-2xl hover:bg-transparent hover:text-primary hover:border-2 px-3 font-medium text-transform: capitalize">
-            <BiPhoneCall className="mr-2 text-xl" /> Call
-            Now
-          </button>
+          <Link className="btn-primary text-base font-semibold text-white px-4 py-3 rounded-full hover:border-2 hover:bg-transparent hover:text-primary">
+            <span className="flex items-center">
+              <BiPhoneCall className="mr-2 text-lg" />
+              <span className='hidden md:inline-block'>Call Now</span>
+            </span>
+          </Link>
         </div>
       </div>
     );
